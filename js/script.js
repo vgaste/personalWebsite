@@ -50,12 +50,12 @@ document.querySelector('button[onclick="showTab(\'projects\')"]').addEventListen
 //Third Javascript Effect
 const image = document.getElementById('changingImage');
 image.addEventListener('click', () => {
-    if(image.src.includes('img2.jpg')) {
+    if(image.src.includes('img2.JPG')) {
         image.src = 'img/img5.jpg';
         image.alt = 'Second Image';
     }
     else {
-        image.src = 'img/img2.jpg';
+        image.src = 'img/img2.JPG';
         image.alt = 'First Image';
     }
 });
@@ -88,4 +88,5 @@ changeColorBtn.addEventListener('click', () => {
         colorBox.classList.add('color-style-2');
     }
     colorToggle = !colorToggle;
+
 });
