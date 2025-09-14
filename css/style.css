@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: black;
+    color: rgb(242, 158, 172);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    height: 200px; /*Layout 1 for desktop*/
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #eee;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+nav button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: white;
+    color: #787b20;
+    transition: 0.3s;
+}
+
+nav button:hover, nav button:active {
+    background-color: #45a049;
+    color: white;
+}
+
+main {
+    max-width: 900px; /*Layout 1 Desktop*/
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+.top-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.desktop-img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.side-text {
+    flex: 1; /*Test against text next to image*/
+}
+
+.bottom-text {
+    margin-top: 20px;
+}
+
+.tab p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#animatedBox {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-top: 20px;
+    transition: left 0.1s;
+}
+
+#changingImage {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+
+.text-effects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.text-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.text-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.font-style-1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+.font-style-2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.color-style-1 {
+    color: darkred;
+}
+.color-style-2 {
+    color: teal;
+}
+
+@media (min-width: 768px) {
+    nav {
+        height: 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    /*For layout 2 mobile*/
+    header {
+        height: 150px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    nav {
+        height: 50px;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    nav button {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    main {
+        max-width: 600px; /*From layout 2 image*/
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .top-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .desktop-img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .side-text {
+        width: 100%;
+    }
+
+    .bottom-text {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Personal Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Personal Website</h1>
+    </header>
+
+    <nav>
+        <button onclick="showTab('about')">About Me</button>
+        <button onclick="showTab('projects')">Projects</button>
+        <button onclick="showTab('hobbies')">Hobbies</button>
+    </nav>
+
+    <main>
+        <!-- About Me Tab -->
+        <section id="about" class="tab active">
+            <div class="top-row">
+                <img src="img/img1.jpg" alt="Profile Picture" class="desktop-img">
+                <div class="side-text">
+                    <p>Text in the about me tab</p>
+                </div>
+            </div>
+            <p class="bottom-text">More text in the about me tab</p>
+        </section>
+
+        <!-- Projects Tab -->
+        <section id="projects" class="tab">
+            <div class="top-row">
+                <!--<img src="img/img2.jpg" alt="Project Screenshot" class="desktop-img">-->
+                <div class="side-text">
+                    <p>5 Javascript Dynamic Effects</p>
+                    <img src="img/img4.jpg" alt="Project Screenshot" class="desktop-img" id="projectImage">
+                    <button id="toggleImageBtn">Hide/Show</button>
+                </div>
+            </div>
+            <div id="animatedBox" class="box"></div>
+            <div class="bottom-text">
+                <!--<p class="bottom-text">More space for the dynamic effects</p>-->
+                <img id="changingImage" src="img/img2.jpg" alt="First Image" style="cursor: pointer;">
+            </div>
+            <div class="text-effects-container">
+                <div class="text-box">
+                    <p id="fontBox">Font change</p>
+                    <button id="changeFontBtn">Change Font</button>
+                </div>
+                <div class="text-box">
+                    <p id="colorBox">Color change</p>
+                    <button id="changeColorBtn">Change Color</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies Tab -->
+        <section id="hobbies" class="tab">
+            <div class="top-row">
+                <img src="img/img3.jpg" alt="Hobby Picture" class="desktop-img">
+                <div class="side-text">
+                    <p>Text about hobbies</p>
+                </div>
+            </div>
+            <p class="bottom-text">More text about hobbies</p>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
