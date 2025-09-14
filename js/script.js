@@ -65,14 +65,16 @@ const fontBox = document.getElementById('fontBox');
 const changeFontBtn = document.getElementById('changeFontBtn');
 let fontToggle = false;
 changeFontBtn.addEventListener('click', () => {
-    fontBox.classList.remove('font-style-1', 'font-style-2');
-    if(fontToggle) {
-        fontBox.classList.add('font-style-1');
+    if(fontBox.classList.contains('font-style-1')) {
+        fontBox.classList.remove('font-style-1');
+        fontBox.classList.add('font-style-2');
+        fontToggle = false;
     }
     else {
-        fontBox.classList.add('font-style-2');
+        fontBox.classList.remove('font-style-2');
+        fontBox.classList.add('font-style-1');
+        fontToggle = true;
     }
-    fontToggle = !fontToggle;
 });
 
 //Fifth Javascript Effect
@@ -90,3 +92,4 @@ changeColorBtn.addEventListener('click', () => {
     colorToggle = !colorToggle;
 
 });
+
